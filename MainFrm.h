@@ -2,8 +2,8 @@
 //
 /////////////////////////////////////////////////////////////////////////////
 
-#if !defined(AFX_MAINFRM_H__B4BE52BD_8685_48FC_A007_5EC243CD77A7__INCLUDED_)
-#define AFX_MAINFRM_H__B4BE52BD_8685_48FC_A007_5EC243CD77A7__INCLUDED_
+#if !defined(AFX_MAINFRM_H__5205038F_DF7E_4615_89C7_96BF97C1CC99__INCLUDED_)
+#define AFX_MAINFRM_H__5205038F_DF7E_4615_89C7_96BF97C1CC99__INCLUDED_
 
 #if _MSC_VER > 1000
 #pragma once
@@ -11,10 +11,9 @@
 
 class CMainFrame : public CMDIFrameWnd
 {
-	
-protected: // create from serialization only
+	DECLARE_DYNAMIC(CMainFrame)
+public:
 	CMainFrame();
-	DECLARE_DYNCREATE(CMainFrame)//declare_dyncreate 动态创建
 
 // Attributes
 public:
@@ -37,13 +36,13 @@ public:
 #endif
 
 protected:  // control bar embedded members
-	CStatusBar  m_wndStatusBar;//状态条
-	CToolBar    m_wndToolBar;//工具条
+	CStatusBar  m_wndStatusBar;
+	CToolBar    m_wndToolBar;
 
 // Generated message map functions
 protected:
 	//{{AFX_MSG(CMainFrame)
-	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);//lpCreateStruct
+	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 		// NOTE - the ClassWizard will add and remove member functions here.
 		//    DO NOT EDIT what you see in these blocks of generated code!
 	//}}AFX_MSG
@@ -55,4 +54,4 @@ protected:
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
 
-#endif // !defined(AFX_MAINFRM_H__B4BE52BD_8685_48FC_A007_5EC243CD77A7__INCLUDED_)
+#endif // !defined(AFX_MAINFRM_H__5205038F_DF7E_4615_89C7_96BF97C1CC99__INCLUDED_)

@@ -116,6 +116,30 @@ BEGIN
 	BEGIN
 		MENUITEM "新建(&N)\tCtrl+N",                ID_FILE_NEW
 		MENUITEM "打开(&O)...\tCtrl+O",            ID_FILE_OPEN
+		MENUITEM SEPARATOR
+		MENUITEM "打印设置(&R)...",             ID_FILE_PRINT_SETUP
+		MENUITEM SEPARATOR
+		MENUITEM "最近文件",                 ID_FILE_MRU_FILE1,GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "退出(&X)",                       ID_APP_EXIT
+	END
+	POPUP "查看(&V)"
+	BEGIN
+		MENUITEM "工具栏(&T)",                    ID_VIEW_TOOLBAR
+		MENUITEM "状态栏(&S)",                 ID_VIEW_STATUS_BAR
+	END
+	POPUP "帮助(&H)"
+	BEGIN
+		MENUITEM "关于 ImagePro(&A)...",          ID_APP_ABOUT
+	END
+END
+IDR_IMAGEPTYPE MENU PRELOAD DISCARDABLE 
+BEGIN
+	POPUP "文件(&F)"
+	BEGIN
+		MENUITEM "新建(&N)\tCtrl+N",                ID_FILE_NEW
+		MENUITEM "打开(&O)...\tCtrl+O",            ID_FILE_OPEN
+		MENUITEM "关闭(&C)",                      ID_FILE_CLOSE
 		MENUITEM "保存(&S)\tCtrl+S",               ID_FILE_SAVE
 		MENUITEM "另存为(&A)...",                 ID_FILE_SAVE_AS
 		MENUITEM SEPARATOR
@@ -140,11 +164,19 @@ BEGIN
 		MENUITEM "工具栏(&T)",                    ID_VIEW_TOOLBAR
 		MENUITEM "状态栏(&S)",                 ID_VIEW_STATUS_BAR
 	END
+	POPUP "窗口(&W)"
+	BEGIN
+		MENUITEM "新建窗口(&N)",                 ID_WINDOW_NEW
+		MENUITEM "层叠(&C)",                    ID_WINDOW_CASCADE
+		MENUITEM "平铺(&T)",                       ID_WINDOW_TILE_HORZ
+		MENUITEM "排列图标(&A)",              ID_WINDOW_ARRANGE
+	END
 	POPUP "帮助(&H)"
 	BEGIN
 		MENUITEM "关于 ImagePro(&A)...",          ID_APP_ABOUT
 	END
 END
+
 
 
 
@@ -257,8 +289,8 @@ END
 
 STRINGTABLE PRELOAD DISCARDABLE 
 BEGIN
-	IDR_MAINFRAME           "ImagePro\n\nImageP\n\n\nImagePro.Document\nImageP Document"
-
+	IDR_MAINFRAME           "ImagePro"
+	IDR_IMAGEPTYPE         "\nImageP\nImageP\n\n\nImagePro.Document\nImageP Document"
 END
 STRINGTABLE PRELOAD DISCARDABLE 
 BEGIN
@@ -305,6 +337,11 @@ BEGIN
 	ID_FILE_MRU_FILE16      "打开该文档"
 	ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
 	ID_PREV_PANE            "切换回前一个窗格\n前一窗格"
+	ID_WINDOW_NEW           "为活动文档打开另一个窗口\n新建窗口"
+	ID_WINDOW_ARRANGE       "将图标排列在窗口底部\n排列图标"
+	ID_WINDOW_CASCADE       "排列窗口成相互重叠\n层叠窗口"
+	ID_WINDOW_TILE_HORZ     "排列窗口成互不重叠\n平铺窗口"
+	ID_WINDOW_TILE_VERT     "排列窗口成互不重叠\n平铺窗口"
 	ID_WINDOW_SPLIT         "将活动的窗口分隔成窗格\n分隔"
 	ID_EDIT_CLEAR           "删除被选对象\n删除"
 	ID_EDIT_CLEAR_ALL       "全部删除\n全部删除"
@@ -332,6 +369,7 @@ BEGIN
 	AFX_IDS_SCCLOSE         "关闭活动的窗口并提示保存所有文档"
 	AFX_IDS_SCRESTORE       "把窗口恢复到正常大小"
 	AFX_IDS_SCTASKLIST      "激活任务表"
+	AFX_IDS_MDICHILD        "激活该窗口"
 	AFX_IDS_PREVIEW_CLOSE   "关闭打印预览模式\n取消预阅"
 END
 

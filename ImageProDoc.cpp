@@ -15,7 +15,7 @@ static char THIS_FILE[] = __FILE__;
 #endif
 
 //外部变量声明
-extern char* szFilter;
+extern char szFilter[];
 /////////////////////////////////////////////////////////////////////////////
 // CImageProDoc
 

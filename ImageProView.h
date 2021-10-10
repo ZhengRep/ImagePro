@@ -2,23 +2,23 @@
 //
 /////////////////////////////////////////////////////////////////////////////
 
-#if !defined(AFX_IMAGEPROVIEW_H__865C1405_220C_4A82_B81A_12C7244B7308__INCLUDED_)
-#define AFX_IMAGEPROVIEW_H__865C1405_220C_4A82_B81A_12C7244B7308__INCLUDED_
+#if !defined(AFX_IMAGEPROVIEW_H__DE4D4585_7C16_48EB_8D2B_A6EFF685B1A6__INCLUDED_)
+#define AFX_IMAGEPROVIEW_H__DE4D4585_7C16_48EB_8D2B_A6EFF685B1A6__INCLUDED_
 
 #if _MSC_VER > 1000
 #pragma once
 #endif // _MSC_VER > 1000
 
 
-class CImageProView : public CScrollView
+class CImageProView : public CView
 {
-protected: // create from serialization 序列化 only
+protected: // create from serialization only
 	CImageProView();
 	DECLARE_DYNCREATE(CImageProView)
 
 // Attributes
 public:
-	CImageProDoc* GetDocument();//获取文件
+	CImageProDoc* GetDocument();
 
 // Operations
 public:
@@ -64,4 +64,4 @@ inline CImageProDoc* CImageProView::GetDocument()
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
 
-#endif // !defined(AFX_IMAGEPROVIEW_H__865C1405_220C_4A82_B81A_12C7244B7308__INCLUDED_)
+#endif // !defined(AFX_IMAGEPROVIEW_H__DE4D4585_7C16_48EB_8D2B_A6EFF685B1A6__INCLUDED_)
