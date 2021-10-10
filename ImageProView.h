@@ -10,15 +10,15 @@
 #endif // _MSC_VER > 1000
 
 
-class CImageProView : public CView
+class CImageProView : public CScrollView
 {
-protected: // create from serialization only
+protected: // create from serialization 序列化 only
 	CImageProView();
 	DECLARE_DYNCREATE(CImageProView)
 
 // Attributes
 public:
-	CImageProDoc* GetDocument();
+	CImageProDoc* GetDocument();//获取文件
 
 // Operations
 public:

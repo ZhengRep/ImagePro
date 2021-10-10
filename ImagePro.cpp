@@ -14,19 +14,21 @@
 static char THIS_FILE[] = __FILE__;
 #endif
 
+//////////////////////////////////////////////////////////////////////////
+//过滤器字符数组
+char szFilter[] = "位图文件(*.BMP)|*.BMP|图形交换格式文件(*.GIF)|*.GIF|PCX文件(*.PCX)|*.PCX|TGA文件(*.TGA)|*.TGA|JPEG文件(*.JPG)|*.JPG|标记图像文件(*.TIF)|*.TIF|所有支持图片|*.BMP,*.GIF,*.PCX,*.TGA,*.JPG,*.TIF|所有文件(*.*)|*.*||";
+
+
 /////////////////////////////////////////////////////////////////////////////
 // CImageProApp
 
 BEGIN_MESSAGE_MAP(CImageProApp, CWinApp)
 	//{{AFX_MSG_MAP(CImageProApp)
 	ON_COMMAND(ID_APP_ABOUT, OnAppAbout)
-		// NOTE - the ClassWizard will add and remove mapping macros here.
-		//    DO NOT EDIT what you see in these blocks of generated code!
-	//}}AFX_MSG_MAP
-	// Standard file based document commands
 	ON_COMMAND(ID_FILE_NEW, CWinApp::OnFileNew)
-	ON_COMMAND(ID_FILE_OPEN, CWinApp::OnFileOpen)
-	// Standard print setup command
+	ON_COMMAND(ID_FILE_OPEN, CImageProApp::OnFileOpen)
+	/*ON_COMMAND(ID_FILE_NEW, CWinApp::OnFileNew)
+	ON_COMMAND(ID_FILE_OPEN, CWinApp::OnFileOpen)*/
 	ON_COMMAND(ID_FILE_PRINT_SETUP, CWinApp::OnFilePrintSetup)
 END_MESSAGE_MAP()
 
@@ -148,6 +150,27 @@ void CImageProApp::OnAppAbout()
 	CAboutDlg aboutDlg;
 	aboutDlg.DoModal();
 }
+
+void CImageProApp::OnFileNew()
+{
+}
+
+void CImageProApp::OnFileOpen()
+{
+	static int nIndex = 1;
+
+	CFileDialog FileDlg(TRUE, NULL, NULL, OFN_HIDEREADONLY, szFilter);//文件对话框
+	FileDlg.m_ofn.nFilterIndex = (DWORD)nIndex;//openfilename
+
+	if (FileDlg.DoModal() == IDOK)
+	{
+		CString PathName = FileDlg.GetPathName();
+		PathName.MakeUpper();
+		OpenDocumentFile(PathName);
+		nIndex = (int)FileDlg.m_ofn.nFilterIndex;
+	}
+}
+
 
 /////////////////////////////////////////////////////////////////////////////
 // CImageProApp message handlers

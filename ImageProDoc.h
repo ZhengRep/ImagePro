@@ -28,7 +28,9 @@ public:
 	public:
 	virtual BOOL OnNewDocument();
 	virtual void Serialize(CArchive& ar);
-	//}}AFX_VIRTUAL
+
+
+	BOOL ReadImgToDoc();
 
 // Implementation
 public:
@@ -38,15 +40,21 @@ public:
 	virtual void Dump(CDumpContext& dc) const;
 #endif
 
-protected:
-
-// Generated message map functions
+private:
+	BOOL m_bImageLoaded;
+	CDibObject* m_pDibObject;
 protected:
 	//{{AFX_MSG(CImageProDoc)
 		// NOTE - the ClassWizard will add and remove member functions here.
 		//    DO NOT EDIT what you see in these blocks of generated code !
 	//}}AFX_MSG
+	afx_msg void OnFileOpen();
+	afx_msg void OnFileNew();
+	afx_msg void OnFileSaveAs();
+
+
 	DECLARE_MESSAGE_MAP()
+
 };
 
 /////////////////////////////////////////////////////////////////////////////

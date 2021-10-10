@@ -55,7 +55,7 @@ BOOL CImageProView::PreCreateWindow(CREATESTRUCT& cs)
 
 void CImageProView::OnDraw(CDC* pDC)
 {
-	CImageProDoc* pDoc = GetDocument();
+	CImageProDoc* pDoc = GetDocument();//call this function to get a pointer to the view's document
 	ASSERT_VALID(pDoc);
 	// TODO: add draw code for native data here
 }

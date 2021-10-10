@@ -37,6 +37,12 @@ public:
 		// NOTE - the ClassWizard will add and remove member functions here.
 		//    DO NOT EDIT what you see in these blocks of generated code !
 	//}}AFX_MSG
+
+//////////////////////////////////////////////////////////////////////////
+	afx_msg void OnFileNew();
+	afx_msg void OnFileOpen();
+
+
 	DECLARE_MESSAGE_MAP()
 };
 

@@ -25,12 +25,13 @@ BEGIN_MESSAGE_MAP(CMainFrame, CFrameWnd)//消息映射
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
+//指标
 static UINT indicators[] =
 {
-	ID_SEPARATOR,           // status line indicator
-	ID_INDICATOR_CAPS,
-	ID_INDICATOR_NUM,
-	ID_INDICATOR_SCRL,
+	ID_SEPARATOR,           // status line indicator separetor
+	ID_INDICATOR_CAPS,//caps
+	ID_INDICATOR_NUM,//num
+	ID_INDICATOR_SCRL,//scrl
 };
 
 /////////////////////////////////////////////////////////////////////////////

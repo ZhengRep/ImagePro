@@ -19,17 +19,11 @@
       <UniqueIdentifier>{8a6d2764-187a-4351-bd50-3bb67d8b8261}</UniqueIdentifier>
       <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
     </Filter>
+    <Filter Include="ImagePro">
+      <UniqueIdentifier>{de6af74e-3827-408d-a453-45f7112108d4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ImagePro.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ImageProDoc.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ImageProView.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="MainFrm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -39,6 +33,18 @@
     <ClCompile Include="DibObject.cpp">
       <Filter>DibObject</Filter>
     </ClCompile>
+    <ClCompile Include="ImagePro.cpp">
+      <Filter>ImagePro</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProDoc.cpp">
+      <Filter>ImagePro</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProView.cpp">
+      <Filter>ImagePro</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ImagePro.rc">
@@ -46,15 +52,6 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ImagePro.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ImageProDoc.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ImageProView.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="MainFrm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -72,6 +69,18 @@
     </ClInclude>
     <ClInclude Include="Imageload.h">
       <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ImagePro.h">
+      <Filter>ImagePro</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProDoc.h">
+      <Filter>ImagePro</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProView.h">
+      <Filter>ImagePro</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildFrm.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

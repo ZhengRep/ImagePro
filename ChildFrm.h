@@ -1,20 +1,20 @@
-// MainFrm.h : interface of the CMainFrame class
+// ChildFrm.h : interface of the CChildFrame class
 //
 /////////////////////////////////////////////////////////////////////////////
 
-#if !defined(AFX_MAINFRM_H__B4BE52BD_8685_48FC_A007_5EC243CD77A7__INCLUDED_)
-#define AFX_MAINFRM_H__B4BE52BD_8685_48FC_A007_5EC243CD77A7__INCLUDED_
+#if !defined(AFX_CHILDFRM_H__C6059D6C_E7DD_4E32_A55D_0D37CABDDA26__INCLUDED_)
+#define AFX_CHILDFRM_H__C6059D6C_E7DD_4E32_A55D_0D37CABDDA26__INCLUDED_
 
 #if _MSC_VER > 1000
 #pragma once
 #endif // _MSC_VER > 1000
 
-class CMainFrame : public CMDIFrameWnd
+
+class CChildFrame : public CMDIChildWnd
 {
-	
-protected: // create from serialization only
-	CMainFrame();
-	DECLARE_DYNCREATE(CMainFrame)//declare_dyncreate 动态创建
+	DECLARE_DYNCREATE(CChildFrame)
+public:
+	CChildFrame();
 
 // Attributes
 public:
@@ -24,26 +24,21 @@ public:
 
 // Overrides
 	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(CMainFrame)
+	//{{AFX_VIRTUAL(CChildFrame)
 	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 	//}}AFX_VIRTUAL
 
 // Implementation
 public:
-	virtual ~CMainFrame();
+	virtual ~CChildFrame();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
 #endif
 
-protected:  // control bar embedded members
-	CStatusBar  m_wndStatusBar;//状态条
-	CToolBar    m_wndToolBar;//工具条
-
 // Generated message map functions
 protected:
-	//{{AFX_MSG(CMainFrame)
-	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);//lpCreateStruct
+	//{{AFX_MSG(CChildFrame)
 		// NOTE - the ClassWizard will add and remove member functions here.
 		//    DO NOT EDIT what you see in these blocks of generated code!
 	//}}AFX_MSG
@@ -55,4 +50,4 @@ protected:
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
 
-#endif // !defined(AFX_MAINFRM_H__B4BE52BD_8685_48FC_A007_5EC243CD77A7__INCLUDED_)
+#endif // !defined(AFX_CHILDFRM_H__C6059D6C_E7DD_4E32_A55D_0D37CABDDA26__INCLUDED_)

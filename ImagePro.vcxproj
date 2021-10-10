@@ -134,6 +134,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ChildFrm.cpp" />
     <ClCompile Include="DibObject.cpp" />
     <ClCompile Include="ImagePro.cpp" />
     <ClCompile Include="ImageProDoc.cpp" />
@@ -150,6 +151,7 @@
     <ResourceCompile Include="ImagePro.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ChildFrm.h" />
     <ClInclude Include="DibObject.h" />
     <ClInclude Include="ImageErrors.h" />
     <ClInclude Include="Imageload.h" />
