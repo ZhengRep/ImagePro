@@ -40,7 +40,7 @@ public:
 	virtual void Dump(CDumpContext& dc) const;
 #endif
 
-private:
+public:
 	BOOL m_bImageLoaded;
 	CDibObject* m_pDibObject;
 protected:

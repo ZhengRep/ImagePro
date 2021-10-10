@@ -10,7 +10,7 @@
 #endif // _MSC_VER > 1000
 
 
-class CImageProView : public CView
+class CImageProView : public CScrollView
 {
 protected: // create from serialization only
 	CImageProView();
@@ -33,6 +33,7 @@ public:
 	virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 	virtual void OnBeginPrinting(CDC* pDC, CPrintInfo* pInfo);
 	virtual void OnEndPrinting(CDC* pDC, CPrintInfo* pInfo);
+	virtual void OnInitialUpdate();
 	//}}AFX_VIRTUAL
 
 // Implementation

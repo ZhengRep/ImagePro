@@ -64,9 +64,6 @@
     <ClInclude Include="DibObject.h">
       <Filter>DibObject</Filter>
     </ClInclude>
-    <ClInclude Include="ImageErrors.h">
-      <Filter>Common</Filter>
-    </ClInclude>
     <ClInclude Include="Imageload.h">
       <Filter>Common</Filter>
     </ClInclude>
@@ -81,6 +78,9 @@
     </ClInclude>
     <ClInclude Include="ChildFrm.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageErrors.h">
+      <Filter>Common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

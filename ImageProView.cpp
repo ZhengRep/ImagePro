@@ -16,17 +16,17 @@ static char THIS_FILE[] = __FILE__;
 /////////////////////////////////////////////////////////////////////////////
 // CImageProView
 
-IMPLEMENT_DYNCREATE(CImageProView, CView)
+IMPLEMENT_DYNCREATE(CImageProView, CScrollView)
 
-BEGIN_MESSAGE_MAP(CImageProView, CView)
+BEGIN_MESSAGE_MAP(CImageProView, CScrollView)
 	//{{AFX_MSG_MAP(CImageProView)
 		// NOTE - the ClassWizard will add and remove mapping macros here.
 		//    DO NOT EDIT what you see in these blocks of generated code!
 	//}}AFX_MSG_MAP
 	// Standard printing commands
-	ON_COMMAND(ID_FILE_PRINT, CView::OnFilePrint)
-	ON_COMMAND(ID_FILE_PRINT_DIRECT, CView::OnFilePrint)
-	ON_COMMAND(ID_FILE_PRINT_PREVIEW, CView::OnFilePrintPreview)
+	ON_COMMAND(ID_FILE_PRINT, CScrollView::OnFilePrint)
+	ON_COMMAND(ID_FILE_PRINT_DIRECT, CScrollView::OnFilePrint)
+	ON_COMMAND(ID_FILE_PRINT_PREVIEW, CScrollView::OnFilePrintPreview)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -47,7 +47,7 @@ BOOL CImageProView::PreCreateWindow(CREATESTRUCT& cs)
 	// TODO: Modify the Window class or styles here by modifying
 	//  the CREATESTRUCT cs
 
-	return CView::PreCreateWindow(cs);
+	return CScrollView::PreCreateWindow(cs);
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -57,11 +57,54 @@ void CImageProView::OnDraw(CDC* pDC)
 {
 	CImageProDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
-	// TODO: add draw code for native data here
+	if (!pDoc->m_bImageLoaded)
+	{
+		pDoc->ReadImgToDoc();
+	}
+
+	//滚动窗口
+	CSize sizeTotal;
+	sizeTotal.cx = pDoc->m_pDibObject->GetWidth();
+	sizeTotal.cy = pDoc->m_pDibObject->GetHeight();
+	SetScrollSizes(MM_TEXT, sizeTotal);
+
+	//获取客户区尺寸
+	OnPrepareDC(pDC);
+	CRect Rect;
+	GetClientRect(&Rect);
+
+	//获取图像宽度及高度
+	int nImageWidth, nImageHeight;
+	nImageWidth = pDoc->m_pDibObject->GetWidth();
+	nImageHeight = pDoc->m_pDibObject->GetHeight();
+
+	//当图像实际尺寸小于窗口尺寸时，将图像放在客户区中间
+	int nX, nY;
+	if (nImageWidth < Rect.Width())
+		nX = (Rect.Width() - nImageWidth) / 2;
+	else
+		nX = 0;
+
+	if (nImageHeight < Rect.Height())
+		nY = (Rect.Height() - nImageHeight) / 2;
+	else
+		nY = 0;
+
+	pDoc->m_pDibObject->Draw(pDC, nX, nY);
 }
 
 /////////////////////////////////////////////////////////////////////////////
 // CImageProView printing
+void CImageProView::OnInitialUpdate()
+{
+	CScrollView::OnInitialUpdate();
+
+	CSize sizeTotal;
+	// TODO: calculate the total size of this view
+	sizeTotal.cx = sizeTotal.cy = 100;
+	SetScrollSizes(MM_TEXT, sizeTotal);
+}
+
 
 BOOL CImageProView::OnPreparePrinting(CPrintInfo* pInfo)
 {
@@ -85,12 +128,12 @@ void CImageProView::OnEndPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
 #ifdef _DEBUG
 void CImageProView::AssertValid() const
 {
-	CView::AssertValid();
+	CScrollView::AssertValid();
 }
 
 void CImageProView::Dump(CDumpContext& dc) const
 {
-	CView::Dump(dc);
+	CScrollView::Dump(dc);
 }
 
 CImageProDoc* CImageProView::GetDocument() // non-debug version is inline
