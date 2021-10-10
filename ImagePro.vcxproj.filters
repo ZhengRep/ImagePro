@@ -9,15 +9,15 @@
       <UniqueIdentifier>{e195d0bd-0c54-4487-a2f9-514b16a8f91d}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{8a6d2764-187a-4351-bd50-3bb67d8b8261}</UniqueIdentifier>
-      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
-    </Filter>
     <Filter Include="DibObject">
       <UniqueIdentifier>{a891d3c8-7288-4af7-a6ce-73d6a5825641}</UniqueIdentifier>
     </Filter>
     <Filter Include="Common">
       <UniqueIdentifier>{8940569c-ba6c-4842-a892-c55a7f0cda41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{8a6d2764-187a-4351-bd50-3bb67d8b8261}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>

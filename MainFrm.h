@@ -14,7 +14,7 @@ class CMainFrame : public CFrameWnd
 	
 protected: // create from serialization only
 	CMainFrame();
-	DECLARE_DYNCREATE(CMainFrame)
+	DECLARE_DYNCREATE(CMainFrame)//declare_dyncreate 动态创建
 
 // Attributes
 public:
@@ -37,13 +37,13 @@ public:
 #endif
 
 protected:  // control bar embedded members
-	CStatusBar  m_wndStatusBar;
-	CToolBar    m_wndToolBar;
+	CStatusBar  m_wndStatusBar;//状态条
+	CToolBar    m_wndToolBar;//工具条
 
 // Generated message map functions
 protected:
 	//{{AFX_MSG(CMainFrame)
-	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
+	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);//lpCreateStruct
 		// NOTE - the ClassWizard will add and remove member functions here.
 		//    DO NOT EDIT what you see in these blocks of generated code!
 	//}}AFX_MSG

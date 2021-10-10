@@ -15,9 +15,9 @@ static char THIS_FILE[] = __FILE__;
 /////////////////////////////////////////////////////////////////////////////
 // CMainFrame
 
-IMPLEMENT_DYNCREATE(CMainFrame, CFrameWnd)
+IMPLEMENT_DYNCREATE(CMainFrame, CFrameWnd)//动态实现
 
-BEGIN_MESSAGE_MAP(CMainFrame, CFrameWnd)
+BEGIN_MESSAGE_MAP(CMainFrame, CFrameWnd)//消息映射
 	//{{AFX_MSG_MAP(CMainFrame)
 		// NOTE - the ClassWizard will add and remove mapping macros here.
 		//    DO NOT EDIT what you see in these blocks of generated code !
@@ -50,25 +50,22 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 {
 	if (CFrameWnd::OnCreate(lpCreateStruct) == -1)
 		return -1;
-	
-	if (!m_wndToolBar.CreateEx(this, TBSTYLE_FLAT, WS_CHILD | WS_VISIBLE | CBRS_TOP
-		| CBRS_GRIPPER | CBRS_TOOLTIPS | CBRS_FLYBY | CBRS_SIZE_DYNAMIC) ||
+	//工具条创建
+	if (!m_wndToolBar.CreateEx(this, TBSTYLE_FLAT, WS_CHILD | WS_VISIBLE | CBRS_TOP | CBRS_GRIPPER | CBRS_TOOLTIPS | CBRS_FLYBY | CBRS_SIZE_DYNAMIC) ||
 		!m_wndToolBar.LoadToolBar(IDR_MAINFRAME))
 	{
-		TRACE0("Failed to create toolbar\n");
+		TRACE0("Failed to create toolbar\n");//traceo 控制台输出
 		return -1;      // fail to create
 	}
 
-	if (!m_wndStatusBar.Create(this) ||
-		!m_wndStatusBar.SetIndicators(indicators,
-		  sizeof(indicators)/sizeof(UINT)))
+	if (!m_wndStatusBar.Create(this) ||!m_wndStatusBar.SetIndicators(indicators,sizeof(indicators)/sizeof(UINT)))
 	{
 		TRACE0("Failed to create status bar\n");
 		return -1;      // fail to create
 	}
 
 	// TODO: Delete these three lines if you don't want the toolbar to
-	//  be dockable
+	//  be dockable 工具栏可停靠
 	m_wndToolBar.EnableDocking(CBRS_ALIGN_ANY);
 	EnableDocking(CBRS_ALIGN_ANY);
 	DockControlBar(&m_wndToolBar);
@@ -87,7 +84,7 @@ BOOL CMainFrame::PreCreateWindow(CREATESTRUCT& cs)
 }
 
 /////////////////////////////////////////////////////////////////////////////
-// CMainFrame diagnostics
+// CMainFrame diagnostics 诊断
 
 #ifdef _DEBUG
 void CMainFrame::AssertValid() const
