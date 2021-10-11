@@ -26,7 +26,7 @@ char szFilter[] = "位图文件(*.BMP)|*.BMP|图形交换格式文件(*.GIF)|*.GIF|PCX文件(*
 BEGIN_MESSAGE_MAP(CImageProApp, CWinApp)
 	//{{AFX_MSG_MAP(CImageProApp)
 	ON_COMMAND(ID_APP_ABOUT, OnAppAbout)
-	ON_COMMAND(ID_FILE_NEW, CWinApp::OnFileNew)
+	ON_COMMAND(ID_FILE_NEW, CImageProApp::OnFileNew)
 	ON_COMMAND(ID_FILE_OPEN, CImageProApp::OnFileOpen)
 	/*ON_COMMAND(ID_FILE_NEW, CWinApp::OnFileNew)
 	ON_COMMAND(ID_FILE_OPEN, CWinApp::OnFileOpen)*/
