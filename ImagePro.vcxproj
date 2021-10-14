@@ -134,12 +134,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AreaPro.cpp" />
     <ClCompile Include="ChildFrm.cpp" />
     <ClCompile Include="DibObject.cpp" />
     <ClCompile Include="ImagePro.cpp" />
     <ClCompile Include="ImageProDoc.cpp" />
     <ClCompile Include="ImageProView.cpp" />
     <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="PointPro.cpp" />
     <ClCompile Include="StdAfx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
@@ -151,6 +153,7 @@
     <ResourceCompile Include="ImagePro.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AreaPro.h" />
     <ClInclude Include="ChildFrm.h" />
     <ClInclude Include="DibObject.h" />
     <ClInclude Include="ImageErrors.h" />
@@ -159,6 +162,7 @@
     <ClInclude Include="ImageProDoc.h" />
     <ClInclude Include="ImageProView.h" />
     <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="PointPro.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="StdAfx.h" />
   </ItemGroup>

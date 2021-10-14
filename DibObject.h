@@ -9,10 +9,11 @@
 #define POPULARITY_PALETTE 0
 #define MEDIAN_CUT_PALETTE 1
 #define FIXED_PALETTE 2
-
-#define GETRGB555( a, b, c, d ) { WORD *wData = (WORD *) d; a = (unsigned char) ( ( (*wData) & 0x7c00 ) >> 7 ); b = (unsigned char) ( ( (*wData) & 0x03e0 ) >> 2 ); c = (unsigned char) ( ( (*wData) & 0x001f ) << 3 ); }
+// <<3×óÒÆÈýÎ»  >> 4 ÓÒÒÆ4Î»	red green	blue	16		temp						0111 1110 0000 0000										0000 0011 1111 0000	
+#define GETRGB555( a, b, c, d ) { WORD *wData = (WORD *) d;  a = (unsigned char) ( ( (*wData) & 0x7c00 ) >> 7 );   b = (unsigned char) ( ( (*wData) & 0x03e0 ) >> 2 );  c = (unsigned char) ( ( (*wData) & 0x001f ) << 3 ); }
 #define GETRGB565( a, b, c, d ) { WORD *wData = (WORD *) d; a = (unsigned char) ( ( (*wData) & 0xf800 ) >> 8 ); b = (unsigned char) ( ( (*wData) & 0x07e0 ) >> 3 ); c = (unsigned char) ( ( (*wData) & 0x001f ) << 3 ); }
 #define GETRGB888( a, b, c, d ) { DWORD *dwData = (DWORD *) d; a = (unsigned char) ( (*dwData) >> 16 ); b = (unsigned char) ( ( (*dwData) & 0x0000ff00 ) >> 8 ); c = (unsigned char) ( (*dwData) & 0x000000ff ); }
+
 #define PUTRGB555( a, b, c, d ) { WORD *wData = (WORD *) d; *wData = ( ( ( (WORD) a & 0x00f8 ) << 7 ) | ( ( (WORD) b & 0x00f8 ) << 2 ) | ( (WORD) c >> 3 ) ); }
 #define PUTRGB565( a, b, c, d ) { WORD *wData = (WORD *) d; *wData = ( ( ( (WORD) a & 0x00f8 ) << 8 ) | ( ( (WORD) b & 0x00fc ) << 3 ) | ( (WORD) c >> 3 ) ); }
 #define PUTRGB888( a, b, c, d ) { DWORD *dwData = (DWORD *) d; *dwData = ( (DWORD) a << 16 ) | ( (DWORD) b << 8 ) | (DWORD) c; }

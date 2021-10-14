@@ -159,6 +159,45 @@ BEGIN
 		MENUITEM "复制(&C)\tCtrl+C",               ID_EDIT_COPY
 		MENUITEM "粘贴(&P)\tCtrl+V",              ID_EDIT_PASTE
 	END
+
+//自定义工具栏
+POPUP "点运算(&P)"
+    BEGIN
+        MENUITEM "图像反色(&I)",                ID_POINT_INVERT
+        MENUITEM "自动亮度(&O)",                ID_POINT_CONTAUTO
+        MENUITEM "线性变换(&L)...",             ID_POINT_LINER
+        MENUITEM SEPARATOR
+        MENUITEM "阈值变换(&T)...",             ID_POINT_THRE
+        MENUITEM "灰度拉伸(&S)...",             ID_POINT_STRE
+        MENUITEM SEPARATOR
+        MENUITEM "灰度均衡(&U)",                ID_POINT_EQUA
+        MENUITEM SEPARATOR
+
+        POPUP "通道操作(&G)"
+        BEGIN
+            MENUITEM "通道分离(S)",                 ID_CHANNEL_SPLIT
+            MENUITEM "通道合成...",                 ID_CHANNEL_COMBINE
+            MENUITEM SEPARATOR
+            MENUITEM "混    合(&M)",                ID_CHANNEL_MIXED
+            MENUITEM "红色分量(&R)",                ID_CHANNEL_RED
+            MENUITEM "绿色分量(&G)",                ID_CHANNEL_GREEN
+            MENUITEM "蓝色分量(&B)",                ID_CHANNEL_BLUE
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "伪彩色编码...",               ID_POINT_PSEUDOCOLOR
+    END
+
+    POPUP "区处理(&R)"
+    BEGIN
+        MENUITEM "图像平滑(&S)...",             ID_ENHA_SMOOTH
+        MENUITEM "中值滤波(&M)...",             ID_ENHA_MidianF
+        MENUITEM SEPARATOR
+        MENUITEM "梯度锐化(&G)",                ID_ENHA_GRADSHARP
+        MENUITEM "模板锐化(E)...",              ID_ENHA_TEMPSHARP
+        MENUITEM "拉普拉斯锐化(&L)...",         ID_ENHA_LAPSHARP
+    END
+
+//自定义结束
 	POPUP "查看(&V)"
 	BEGIN
 		MENUITEM "工具栏(&T)",                    ID_VIEW_TOOLBAR

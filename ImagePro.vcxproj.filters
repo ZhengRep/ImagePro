@@ -22,6 +22,12 @@
     <Filter Include="ImagePro">
       <UniqueIdentifier>{de6af74e-3827-408d-a453-45f7112108d4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AreaPro">
+      <UniqueIdentifier>{b302a3c3-ec94-4a0b-8a48-cb9ad5173345}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PointPro">
+      <UniqueIdentifier>{56f5a263-5f34-4153-a8a6-1ef405c2c5d8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainFrm.cpp">
@@ -44,6 +50,12 @@
     </ClCompile>
     <ClCompile Include="ChildFrm.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PointPro.cpp">
+      <Filter>PointPro</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaPro.cpp">
+      <Filter>AreaPro</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +93,12 @@
     </ClInclude>
     <ClInclude Include="ImageErrors.h">
       <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="PointPro.h">
+      <Filter>PointPro</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaPro.h">
+      <Filter>AreaPro</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
