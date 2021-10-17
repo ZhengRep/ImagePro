@@ -30,7 +30,8 @@ END_MESSAGE_MAP()
 CChildFrame::CChildFrame()
 {
 	// TODO: add member initialization code here
-	
+	m_nHeight = 150;
+	m_nWidth = 150;
 }
 
 CChildFrame::~CChildFrame()

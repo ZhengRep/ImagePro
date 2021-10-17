@@ -135,11 +135,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AreaPro.cpp" />
+    <ClCompile Include="CDlgColor.cpp" />
     <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="CombineDlg.cpp" />
     <ClCompile Include="DibObject.cpp" />
+    <ClCompile Include="DlgIntensity.cpp" />
+    <ClCompile Include="DlgLinerPara.cpp" />
+    <ClCompile Include="DlgMedianFilter.cpp" />
+    <ClCompile Include="DlgPointStre.cpp" />
+    <ClCompile Include="DlgSmooth.cpp" />
+    <ClCompile Include="DlgThreshold.cpp" />
+    <ClCompile Include="EdgeDetDlg.cpp" />
     <ClCompile Include="ImagePro.cpp" />
     <ClCompile Include="ImageProDoc.cpp" />
     <ClCompile Include="ImageProView.cpp" />
+    <ClCompile Include="LapDlg.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="PointPro.cpp" />
     <ClCompile Include="StdAfx.cpp">
@@ -154,13 +164,23 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AreaPro.h" />
+    <ClInclude Include="CDlgColor.h" />
     <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="CombineDlg.h" />
     <ClInclude Include="DibObject.h" />
+    <ClInclude Include="DlgIntensity.h" />
+    <ClInclude Include="DlgLinerPara.h" />
+    <ClInclude Include="DlgMedianFilter.h" />
+    <ClInclude Include="DlgPointStre.h" />
+    <ClInclude Include="DlgSmooth.h" />
+    <ClInclude Include="DlgThreshold.h" />
+    <ClInclude Include="EdgeDetDlg.h" />
     <ClInclude Include="ImageErrors.h" />
     <ClInclude Include="Imageload.h" />
     <ClInclude Include="ImagePro.h" />
     <ClInclude Include="ImageProDoc.h" />
     <ClInclude Include="ImageProView.h" />
+    <ClInclude Include="LapDlg.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="PointPro.h" />
     <ClInclude Include="Resource.h" />

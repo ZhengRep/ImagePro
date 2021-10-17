@@ -28,6 +28,12 @@
     <Filter Include="PointPro">
       <UniqueIdentifier>{56f5a263-5f34-4153-a8a6-1ef405c2c5d8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="PointPro\Dlg">
+      <UniqueIdentifier>{15194cee-0713-4ad1-be58-6a381caca467}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AreaPro\Dlg">
+      <UniqueIdentifier>{0b44f5d4-e455-462d-bbb5-7b9023052425}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainFrm.cpp">
@@ -56,6 +62,36 @@
     </ClCompile>
     <ClCompile Include="AreaPro.cpp">
       <Filter>AreaPro</Filter>
+    </ClCompile>
+    <ClCompile Include="CDlgColor.cpp">
+      <Filter>PointPro\Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="CombineDlg.cpp">
+      <Filter>PointPro\Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgIntensity.cpp">
+      <Filter>PointPro\Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgLinerPara.cpp">
+      <Filter>PointPro\Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgMedianFilter.cpp">
+      <Filter>PointPro\Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgPointStre.cpp">
+      <Filter>PointPro\Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSmooth.cpp">
+      <Filter>AreaPro\Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgThreshold.cpp">
+      <Filter>AreaPro\Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="EdgeDetDlg.cpp">
+      <Filter>AreaPro\Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="LapDlg.cpp">
+      <Filter>AreaPro\Dlg</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +135,36 @@
     </ClInclude>
     <ClInclude Include="AreaPro.h">
       <Filter>AreaPro</Filter>
+    </ClInclude>
+    <ClInclude Include="CDlgColor.h">
+      <Filter>PointPro\Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="CombineDlg.h">
+      <Filter>PointPro\Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgIntensity.h">
+      <Filter>PointPro\Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgLinerPara.h">
+      <Filter>PointPro\Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgMedianFilter.h">
+      <Filter>PointPro\Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgPointStre.h">
+      <Filter>PointPro\Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSmooth.h">
+      <Filter>AreaPro\Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgThreshold.h">
+      <Filter>AreaPro\Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="EdgeDetDlg.h">
+      <Filter>AreaPro\Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="LapDlg.h">
+      <Filter>AreaPro\Dlg</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

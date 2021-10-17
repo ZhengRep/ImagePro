@@ -18,7 +18,8 @@ public:
 
 // Attributes
 public:
-
+	int m_nWidth;
+	int m_nHeight;
 // Operations
 public:
 
