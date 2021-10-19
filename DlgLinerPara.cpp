@@ -161,6 +161,7 @@ void CDlgLinerPara::OnMouseMove(UINT nFlags, CPoint point)
 			{
 				// 擦去以前的橡皮筋线
 				pDC->MoveTo(m_p1);
+
 				pDC->LineTo(m_p2);
 			}
 			

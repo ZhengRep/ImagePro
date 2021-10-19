@@ -90,7 +90,7 @@ BOOL CDlgIntensity::OnInitDialog()
 	GetClientRect(rect);
 	ClientToScreen(&rect);
 	
-	m_MouseRect.top -= rect.top;
+	m_MouseRect.top -= rect.top;//计算
 	m_MouseRect.left -= rect.left;
 	
 	// 设置接受鼠标事件的有效区域
